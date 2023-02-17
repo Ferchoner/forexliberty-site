@@ -1,0 +1,291 @@
+@media (max-width: 575px) {
+}
+
+/* MAIN SECTION */
+.main-section {
+    margin-bottom: 120px;;
+}
+
+.main-section > .row {
+    background-color: #ebebeb;
+    border-radius: 35px;
+    padding-bottom: 20px !important;
+}
+
+.main-section .video-container video {
+    border-radius: 20px;
+}
+
+.main-section .data-container .text-data-title,
+.system-section .data-container .text-data-title,
+.licenses-section .text-data-title,
+.review-section .text-data-info,
+.help-section .text-data-title
+{
+    color: #12213d;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.system-section .data-container .text-data-title
+{
+    margin-bottom: 35px;
+}
+
+.main-section .data-container .text-data-info,
+.system-section .data-container .text-data-info,
+.licenses-section .text-data-info,
+.help-section .text-data-info .subcontainer {
+    color: #2d2e82;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    padding: 10px 5px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.system-section .data-container .text-data-info {
+    color: #12213d;
+    background-color: unset;
+    padding: 0;
+    border-radius: unset;
+    margin-bottom: 0;
+}
+
+.main-section .hangout-button {
+    padding: 10px 20px;
+}
+
+.main-section .text-data-info img {
+    width: 25px;
+    margin: 0 5px;
+}
+
+.system-section .image-container img {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.system-section {
+    margin-bottom: 80px;
+}
+
+.licenses-section {
+    background-color: #2d2e82;
+    padding: 90px 0 50px;
+}
+
+.licenses-section .data-container {
+    max-width: 1600px;
+    margin: 0 auto 45px;
+}
+
+.licenses-section .text-data-title {
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+.licenses-section .text-data-info {
+    color: #ffffff;
+    background-color: unset;
+    padding: 0;
+    border-radius: unset;
+    margin-bottom: 0;
+    line-height: 15px;
+}
+
+.licenses-section .text-data-info .bigger {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.licenses-section .text-data-info img {
+    width: 100px;
+    margin: 0 15px;
+}
+
+.licenses-section .hangout-button {
+    background-color: #ffffff;
+    color: #12213d;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.review-section {
+    padding-top: 90px;
+}
+
+.review-section .text-data-info.bigger {
+    font-size: 85px;
+    line-height: 100px;
+    margin: 0;
+}
+
+.review-section .hangout-button {
+    background-color: #ebebeb;
+    color: #12213d;
+    font-size: 18px;
+    padding: 15px 20px;
+}
+
+.help-section {
+    background-color: #1a202c;
+}
+
+.help-section > .row {
+    padding-top: 30px;
+}
+
+.help-section .text-data-title {
+    color: #FFFFFF;
+}
+
+.help-section .text-data-info .subcontainer {
+    line-height: 35px;
+    font-size: 35px;
+    color: #ffffff;
+    background-color: #3f4d63;
+    padding: 35px 0 25px;
+    margin: 0 auto 0;
+    border-radius: 50px;
+}
+
+.help-section .text-data-info .help-img {
+    display: block;
+    height: auto;
+    width: 55%;
+    background-color: #36445b;
+    margin: 20px auto 20px;
+    padding: 0;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.help-section .text-data-info .help-img img {
+    width: 100%;
+    top: 50%;
+    position: relative;
+    translate: 0 -50%;
+}
+
+.help-section .text-data-info .help-img.robot img {
+    width: 50%;
+}
+
+.help-section .text-data-info .help-img.monitor img {
+    width: 65%;
+}
+
+.help-section .text-data-info .help-img.answers img {
+    width: 75%;
+}
+
+.help-section a.hangout-button {
+    margin: 0;
+    padding: 10px 15px;
+    background-color: #00efe7;
+    color: #12213d;
+    font-size: 15px;
+}
+
+@media (min-width: 576px) {
+    .main-section .video-container video {
+        border-radius: 60px;
+    }
+
+    .main-section .data-container .text-data-title,
+    .system-section .data-container .text-data-title,
+    .licenses-section .text-data-title, .review-section .text-data-info,
+    .help-section .text-data-title {
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 55px;
+    }
+
+    .main-section .text-data-info img {
+        width: 35px;
+        margin: 0 20px 0 5px;
+    }
+
+    .main-section .data-container .text-data-info,
+    .system-section .data-container .text-data-info,
+    .licenses-section .text-data-info,
+    .help-section .text-data-info .subcontainer {
+        font-size: 25px;
+        line-height: 55px;
+    }
+
+    .main-section .hangout-button {
+        padding: 15px 40px;
+    }
+
+    .main-section > .row {
+        background-color: #ebebeb;
+        border-radius: 35px;
+        padding-bottom: 70px !important;
+    }
+
+    .licenses-section .text-data-info img {
+        width: 100px;
+        margin: 0;
+    }
+
+    .licenses-section .text-data-info {
+        color: #ffffff;
+        background-color: unset;
+        padding: 0;
+        border-radius: unset;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    .licenses-section .text-data-info .bigger {
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .licenses-section .hangout-button {
+        background-color: #ffffff;
+        color: #12213d;
+        font-size: 20px;
+        padding: 15px 35px;
+    }
+
+    .review-section .text-data-info.bigger {
+        font-size: 115px;
+        line-height: 100px;
+        margin: 0;
+    }
+
+    .review-section .hangout-button {
+        font-size: 20px;
+        padding: 15px 35px;
+    }
+
+    .help-section > .row {
+        padding-top: 110px;
+    }
+
+    .help-section a.hangout-button {
+        margin: 0;
+        padding: 15px 25px;
+        background-color: #00efe7;
+        color: #12213d;
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+
+}
+
+@media (min-width: 1200px) {
+
+}

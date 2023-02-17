@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'montserratlight';
+    src: url('/font/Montserrat-Light.woff2') format('woff2'),
+    url('/font/Montserrat-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/font/Montserrat-Regular.woff2') format('woff2'),
+    url('/font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('/font/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/font/Montserrat-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.text-montserrat-light {
+    font-family: montserratlight, Nunito, sans-serif !important;
+    letter-spacing: 1px;
+}
+
+.text-montserrat-regular {
+    font-family: montserratregular, Nunito, sans-serif !important;
+    letter-spacing: 1px;
+}
+
+.text-montserrat-semibold {
+    font-family: montserratsemibold, Nunito, sans-serif !important;
+    letter-spacing: 1px;
+}
+
+.hangout-button {
+    background-color: #2d2e82;
+    color: #00efe7;
+    border-radius: 15px;
+    line-height: 30px;
+    translate: 0 -4px;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+html, body {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.mobile-menu-content {
+    background: blue;
+    left: -150vw;
+}
+
+.main-section {
+    margin-top: 110px;
+}
+
+@media (min-width: 576px) {
+    .hangout-button {
+        background-color: #2d2e82;
+        color: #00efe7;
+        border-radius: 15px;
+        line-height: 30px;
+        translate: 0 -4px;
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    .main-section {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
