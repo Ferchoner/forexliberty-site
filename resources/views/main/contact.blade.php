@@ -11,70 +11,63 @@
 @endpush
 
 @section('content')
-<div class="row form-section w-100 h-100 align-content-center m-0 p-0 mt-5">
-    <div class="container mt-5">
-        <div class="row pb-5 pb-lg-0">
-            <div class="col col-12 col-lg-6 text-center contact-message">
-                <span class="text-candara-bold section-title">
-                    Agenda una cita
-                </span>
-                <p class="text-gotham-medium text-center text-content">
-                    Estamos listos para brindarte la mejor atención.
+    <div id="main-section" class="main-section mx-5">
+        <div class="row p-5 m-0">
+            <div class="col-12 col-md-6 img-container text-center">
+                <p class="text-data-title text-montserrat-semibold text-center">
+                    ¡Nos encataría saber de ti!
                 </p>
-                <div class="text-location mb-5">
-                    <img src="{{ asset('image/ubicacion_CC.svg') }}" alt="Ubicación">
-                    <p class="text-gotham-medium text-center text-content">
-                        Av. Periodísmo José Tocaven Lavín #1037, Agustín Arriaga Rivera, C.P. 58190, Morelia, Michoacán.
-                    </p>
-                </div>
+                <p class="text-data-info text-montserrat-regular px-5 mb-5">
+                    Nos pondremos en contacto para brindarte más información.
+                </p>
             </div>
-            <div class="col col-12 col-lg-6 pb-5 pb-lg-0">
-                <div class="form-container pb-5 pb-lg-0">
-                    <form action="{{ route('save-form') }}" method="post" class="contact-form px-4">
+            <div class="col-12 col-md-6 m-0 px-5 text-container">
+                <div class="form-container p-5 mb-5">
+                    <form action="{{ route('save-form') }}" method="post" class="contact-form p-2 px-4">
                         @csrf
                         @if ($errors->any())
                             <div class="form-group">
-                                <label for="full_name" class="text-gotham-medium error_message">
-                                    El formulario contiene errores, por favor revisalos para poder continuar
+                                <label for="all-form" class="text-montserrat-semibold error_message">
+                                    El formulario contiene errores, por favor revisalos para poder continuar <br>
+                                    @foreach ($errors->all() as $error)
+                                        - {{ __($error) }} <br>
+                                    @endforeach
                                 </label>
                             </div>
                         @endif
                         @if (session('message'))
                             <div class="form-group">
-                                <label for="full_name" class="text-gotham-medium success_message">
+                                <label for="full_name" class="text-montserrat-semibold success_message">
                                     {{ session('message') }}
                                 </label>
                             </div>
                         @endif
                         <div class="form-group">
-                            <label for="full_name" class="text-gotham-medium">
+                            <label for="full_name" class="text-montserrat-regular">
                                 Nombre
                             </label>
-                            <input type="text" required class="form-control @error('full_name') is_invalid @enderror" name="full_name" placeholder="Ingresa tu nombre completo" value="{{ old('full_name', '') }}">
+                            <input type="text" required class="form-control @error('full_name') is_invalid @enderror" name="full_name" value="{{ old('full_name', '') }}">
                         </div>
                         <div class="form-group">
-                            <label for="phone" class="text-gotham-medium">
-                                Teléfono
-                            </label>
-                            <input type="text" required class="form-control @error('phone') is_invalid @enderror" name="phone" placeholder="Ingresa tu número de teléfono" value="{{ old('phone', '') }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="text-gotham-medium">
+                            <label for="email" class="text-montserrat-regular">
                                 Correo electrónico
                             </label>
-                            <input id="subject"  type="email" required class="form-control @error('email') is_invalid @enderror" name="email" placeholder="Ingresa tu correo electrónico" value="{{ old('email', '') }}">
+                            <input id="subject"  type="email" required class="form-control @error('email') is_invalid @enderror" name="email" value="{{ old('email', '') }}">
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="text-gotham-medium">
-                                Asunto
+                            <label for="phone" class="text-montserrat-regular">
+                                Teléfono
                             </label>
-                            <input id="subject" type="text" required class="form-control @error('subject') is_invalid @enderror" name="subject" placeholder="Ingresa el servicio de tu interes" value="{{ old('subject', '') }}">
+                            <input type="text" required class="form-control @error('phone') is_invalid @enderror" name="phone" value="{{ old('phone', '') }}">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" required name="message" placeholder="Ingresa tu mensaje" rows="7">{{ old('message', '') }}</textarea>
+                            <label for="message" class="text-montserrat-regular">
+                                Mensaje
+                            </label>
+                            <textarea class="form-control" required name="message" rows="4">{{ old('message', '') }}</textarea>
                         </div>
-                        <div class="form-group text-right">
-                            <button class="btn btn-primary text-capitalize text-right">
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary text-capitalize text-center text-montserrat-semibold">
                                 Envíar
                             </button>
                         </div>
@@ -83,5 +76,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

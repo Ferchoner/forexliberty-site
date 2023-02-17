@@ -10,27 +10,57 @@ use Illuminate\Support\Facades\Mail;
 class MainController extends Controller
 {
     public function home(Request $request) {
-        return view('main.home', ['header' => true]);
+        return view('main.home', [
+            'footer_bg_styles' => 'background-color: #1a202c'
+        ]);
     }
 
-    public function services(Request $request) {
-        return view('main.services', ['header' => false]);
+    public function licenses(Request $request) {
+        return view('main.licenses', [
+            'footer_bg_styles' => 'background-color: #2d2e82'
+        ]);
     }
 
-    public function medical(Request $request) {
-        return view('main.medical', ['header' => false]);
+    public function explanation(Request $request) {
+        return view('main.explanation', [
+        'footer_bg_styles' => 'background-color: #12213d'
+        ]);
     }
 
-    public function privacy(Request $request) {
-        return view('main.privacy', ['header' => false]);
+    public function testimony(Request $request) {
+        return view('main.testimony', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
     }
 
-    public function team(Request $request) {
-        return view('main.team', ['header' => false]);
+    public function results(Request $request) {
+        return view('main.results', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
+    }
+
+    public function botWorking(Request $request) {
+        return view('main.bot_working', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
+    }
+
+    public function aboutUs(Request $request) {
+        return view('main.about_us', [
+            'footer_bg_styles' => 'background-color: #2d2e82'
+        ]);
     }
 
     public function contact(Request $request) {
-        return view('main.contact', ['header' => false]);
+        return view('main.contact', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
+    }
+
+    public function faqs(Request $request) {
+        return view('main.faqs', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
     }
 
     public function save(Request $request) {
@@ -38,12 +68,11 @@ class MainController extends Controller
             'full_name' => 'required|string|min:5|max:150',
             'phone' => 'required|string|min:9|max:11',
             'email' => 'required|email:rfc,dns,spoof,filter',
-            'subject' => 'required|string|min:5|max:150',
             'message' => 'required|string|min:4|max:150'
         ]);
 
-        Mail::to('contacto@colin-cordoba.com.mx')->bcc('rasoner@gmail.com')->send(new ContactForm($validated));
-        Mail::to($validated['email'])->bcc('rasoner@gmail.com')->send(new ContactFormUser($validated));
+        // Mail::to('contacto@colin-cordoba.com.mx')->bcc('rasoner@gmail.com')->send(new ContactForm($validated));
+        // Mail::to($validated['email'])->bcc('rasoner@gmail.com')->send(new ContactFormUser($validated));
 
         return redirect(route('contact'))->with(['message' => 'Muchas gracias por ponerte en contacto con nosotros, en unos minutos nuestros asesores se pondrán en contacto contigo']);
     }

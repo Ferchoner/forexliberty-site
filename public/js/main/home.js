@@ -1,11 +1,20 @@
+// VARS
+
+// Code
 $(() => {
-    document.querySelectorAll('.main-bg video').forEach((el, i) => {
-        el.addEventListener('loadeddata', (e) => {
-            if(el.readyState >= 3){
-                el.play();
-            }
+    document.querySelectorAll('.main-section video').forEach((el, i) => {
+        el.addEventListener('click', (e) => {
+            el.muted = !el.muted;
         });
     })
 
-    // $('.list-el').on('click', (ev) => )
+    /* make the API call */
+    FB.api(
+        "/100090421537711/ratings",
+        function (response) {
+            if (response && !response.error) {
+                /* handle the result */
+            }
+        }
+    );
 })

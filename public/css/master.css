@@ -1,219 +1,89 @@
 @font-face {
-    font-family: 'Candara';
-    src: url('/font/Candara-Bold.woff2') format('woff2'),
-    url('/font/Candara-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('/font/Gotham-Bold.woff2') format('woff2'),
-    url('/font/Gotham-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GothamBook';
-    src: url('/font/Gotham-Book.woff2') format('woff2'),
-    url('/font/Gotham-Book.woff') format('woff');
+    font-family: 'montserratlight';
+    src: url('/font/Montserrat-Light.woff2') format('woff2'),
+    url('/font/Montserrat-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
-    font-family: 'GothamMedium';
-    src: url('/font/Gotham-Medium.woff2') format('woff2'),
-    url('/font/Gotham-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'montserratregular';
+    src: url('/font/Montserrat-Regular.woff2') format('woff2'),
+    url('/font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-    transition: width 300ms;
-
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('/font/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/font/Montserrat-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* width */
-::-webkit-scrollbar:hover {
-    width: 12px;
-    border-radius: 2px;
+body.modal-open {
+    overflow: hidden;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #ffffff;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #D02C2F;
-    border-radius: 3px;
-    transition: background-color 300ms;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #600707;
-}
-
-html, body {
-    color: #ffffff;
-}
-
-.text-candara-bold {
-    font-family: Candara, 'Nunito', sans-serif !important;
-    font-weight: 700 !important;
-}
-
-.text-gotham {
-    font-family: Gotham, 'Nunito', sans-serif !important;
-}
-
-.text-gotham-book {
-    font-family: GothamBook, 'Nunito', sans-serif !important;
-    font-weight: 400 !important;
-}
-
-.text-gotham-medium {
-    font-family: GothamMedium, 'Nunito', sans-serif !important;
-    font-weight: 400 !important;
-}
-
-.text-gotham-book .bold, .text-gotham-book.bold,
-.text-gotham-medium .bold, .text-gotham-medium.bold{
-    font-weight: 700 !important;
-}
-
-.section-title {
-    font-size: 45px;
-    line-height: 60px;
-}
-
-.text-subtitle {
-    font-size: 25px;
-    line-height: 30px;
+.text-montserrat-light {
+    font-family: montserratlight, Nunito, sans-serif !important;
     letter-spacing: 1px;
 }
 
-.text-content {
-    font-size: 14px;
-    line-height: 20px;
+.text-montserrat-regular {
+    font-family: montserratregular, Nunito, sans-serif !important;
+    letter-spacing: 1px;
 }
 
-.btn.btn-primary {
-    background: transparent url('/image/linea-boton_CC.png') no-repeat bottom right;
-    background-size: 130px auto;
-    border-radius: 0;
-    border: 1px transparent;
-    padding: 15px 30px;
-    font-size: 30px;
-    line-height: 25px;
-    font-family: Candara, 'Nunito', sans-serif;
+.text-montserrat-semibold {
+    font-family: montserratsemibold, Nunito, sans-serif !important;
+    letter-spacing: 1px;
 }
 
-.btn.btn-primary:not(:disabled):not(.disabled):active {
-    background: transparent url('/image/linea-boton_CC.png') no-repeat bottom right;
-    background-size: 130px auto;
+.hangout-button {
+    background-color: #2d2e82;
+    color: #00efe7;
+    border-radius: 15px;
+    line-height: 30px;
+    translate: 0 -4px;
+    font-size: 18px;
+    padding: 10px 15px;
 }
 
-.btn-primary.focus, .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    border: 1px transparent;
+html, body {
+    background-color: #ffffff;
+    color: #ffffff;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);;
+.mobile-menu-content {
+    background: blue;
+    left: -150vw;
 }
 
-.btn-primary.focus, .btn-primary:focus-visible {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    border: 1px transparent;
-    outline: none;
+.main-section {
+    margin-top: 110px;
 }
-
-/****
-
- */
-.btn-secondary:hover {
-    color: #1F252D;
-}
-
-.btn.btn-secondary {
-    background: transparent url('/image/linea-boton-secondary_CC.png') no-repeat bottom right;
-    background-size: 130px auto;
-    border-radius: 0;
-    border: 1px transparent;
-    padding: 15px 30px;
-    font-size: 30px;
-    line-height: 25px;
-    font-family: Candara, 'Nunito', sans-serif;
-}
-
-.btn.btn-secondary:not(:disabled):not(.disabled):active {
-    color: #1F252D;
-    background: transparent url('/image/linea-boton-secondary_CC.png') no-repeat bottom right;
-    background-size: 130px auto;
-}
-
-.btn-secondary.focus, .btn-secondary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    border: 1px transparent;
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-}
-
-.btn-secondary.focus, .btn-secondary:focus-visible {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    border: 1px transparent;
-    outline: none;
-}
-
 
 @media (min-width: 576px) {
-
+    .hangout-button {
+        background-color: #2d2e82;
+        color: #00efe7;
+        border-radius: 15px;
+        line-height: 30px;
+        translate: 0 -4px;
+        font-size: 20px;
+        padding: 10px 15px;
+    }
 }
 
 @media (min-width: 768px) {
-    .section-title {
-        font-size: 60px;
-        line-height: 100px;
-    }
 
-    .text-content {
-        font-size: 18px;
-        line-height: 23px;
-    }
-
-    .btn.btn-primary, .btn.btn-secondary {
-        background-size: auto;
-        font-size: 45px;
-        line-height: 40px;
-        padding: 15px 40px;
-    }
 }
 
 @media (min-width: 992px) {
-    .text-subtitle {
-        font-size: 32px;
-        line-height: 35px;
-    }
-
-    .border-lg-right {
-        border-right: 1px solid #ffffff;
+    .main-section {
+        margin-top: 0;
     }
 }
 

@@ -1,64 +1,86 @@
-let scrollTop = 0;
-const n = -0.022;
-const m = 130.38;
+// VARS
+let headerEl = null;
 
-$(() => {
-    $(window).scroll(() => {
-        scrollTop = $(window).scrollTop();
+let openModal = (modal_selector) => {
+    let modal = null;
+    modal = document.querySelector(modal_selector);
+    if (modal) {
+        modal.classList.add('open');
+        document.querySelector('body').classList.add('modal-open');
+    }
+}
 
-        if (scrollTop >= 90 && header) {
-            $('.desktop-menu').removeClass('fixed-top-visible');
-            $('.mobile-menu').addClass('fixed-top-visible');
-        }
-        else if (header){
-            $('.desktop-menu').addClass('fixed-top-visible');
-            $('.mobile-menu').removeClass('fixed-top-visible');
-            $('.h-container').removeClass('change');
-            $('.mobile-menu-content').removeClass('open');
-        }
+let closeModal = (modal_selector) => {
+    let modal = null;
+    modal = document.querySelector(modal_selector);
+    if (modal) {
+        modal.classList.remove('open');
+        document.querySelector('body').classList.remove('modal-open');
+    }
+}
 
-        if( isScrolledIntoView(document.querySelector('#contact-section'), true) ) {
-            $('#contact-section').css('background-position', '27% ' + ((scrollTop * n) + m) + '%')
-        }
-    })
+let toggleModal = (modal_selector) => {
+    let modal = null;
+    modal = document.querySelector(modal_selector);
+    if (modal) {
+        modal.classList.toggle('open');
+        document.querySelector('body').classList.toggle('modal-open');
+    }
+}
 
-    let nosotrosEl = document.querySelector('.col.list-el');
-    if(nosotrosEl) {
-        nosotrosEl.addEventListener('click', evt => {
-            $('.h-container').toggleClass('change');
-            $('.mobile-menu-content').toggleClass('open');
-        });
+// devuelve la cookie con el nombre dado,
+// o undefined si no la encuentra
+let _getCookie = (name) => {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+let _setCookie = (name, value, options = {}) => {
+
+    options = {
+        path: '/',
+        // agregar otros valores predeterminados si es necesario
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
     }
 
-    $('.h-container').on('click', changeMenu);
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+// Code
+$(() => {
+    headerEl = document.querySelector('.desktop-fixed-menu');
+    if (headerEl)
+        $(window).scroll(() => {
+            scrollTop = $(window).scrollTop();
+            if (scrollTop >= 120) {
+                headerEl.classList.add('visible')
+            } else {
+                headerEl.classList.remove('visible')
+            }
+        })
 
     $(window).scroll();
-    playVideo();
+    if (!_getCookie('promo')) {
+        setTimeout(() => {
+            _setCookie('promo', 1);
+            openModal('.promo-modal');
+        }, 1500)
+    }
 })
 
-let changeMenu = evt => {
-    evt.preventDefault();
-    $('.h-container').toggleClass('change');
-    $('.mobile-menu-content').toggleClass('open');
-}
-
-let playVideo = () => {
-    let videos = document.querySelectorAll('video');
-    videos.forEach(el => el.play());
-}
-
-function isScrolledIntoView(el, partial) {
-    if (!el)
-        return false;
-
-    partial = partial || false;
-    let rect = el.getBoundingClientRect();
-    let elemTop = rect.top;
-    let elemBottom = rect.bottom;
-
-    if (partial) {
-        return elemTop < window.innerHeight && elemBottom >= 0;
-    }
-    // Only completely visible elements return true:
-    return (elemTop >= 0) && (elemBottom <= window.innerHeight);
-}
