@@ -97,16 +97,44 @@
     <div id="review-section" class="review-section container-fluid py-3 px-0">
         <div class="row m-0 p-0 ps-md-5">
             <div class="align-self-center col-12 col-md-6 ps-3 ps-md-5">
-                <iframe
-                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0FGUCXsLGMyFgQsbcu5VHwUzVPhnpki3UhVvxL9i9ukZmLiSZJxDWSyN7wNd6NmJtl%26id%3D100064028196535&show_text=true&width=500"
-                    width="100%"
-                    height="226"
-                    style="border:none;overflow:hidden"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
+                <div class="row">
+                    <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Review 2"></button>
+                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="2" aria-label="Review 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 1">
+                                <div class="carousel-caption">
+                                    <p class="text-montserrat-regular fst-italic">"Feliz por haber tomado la decisión de adquirir el robot. Siempre obtengo respuesta, muy buena asistencia."</p>
+                                    <p class="author-cont text-end">
+                                        <span class="author text-montserrat-semibold fw-bold">Martin Cafferatto</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 2">
+                                <div class="carousel-caption">
+                                    <p class="text-montserrat-regular fst-italic">"Súper recomendado el bot, es una gran herramienta ya llevo un tiempo con él y estoy muy feliz con sus resultados."</p>
+                                    <p class="author-cont text-end">
+                                        <span class="author text-montserrat-semibold fw-bold">Sebastian Martinez</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 3">
+                                <div class="carousel-caption">
+                                    <p class="text-montserrat-regular fst-italic">"A Good trading platform service I can truly trust. They are transparent on all transactions and explain everything clearly.I never had fear and i am confident in trading with them."</p>
+                                    <p class="author-cont text-end">
+                                        <span class="author text-montserrat-semibold fw-bold">Daniels Graham</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-md-6 data-container p-5 px-3 px-md-5">
                 <p class="text-montserrat-semibold text-data-info bigger text-center pt-5">
@@ -170,9 +198,7 @@
             </div>
             <div class="col-12 text-center px-3 px-md-5 py-5">
                 <p class="m-0 p-2">
-                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
-                        Agenda una videollamada
-                    </a>
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
                 </p>
             </div>
         </div>

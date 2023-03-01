@@ -31,9 +31,7 @@
             <div class="col-12 data-table text-center">
                 <img src="{{ asset('image/tabla_FXL.svg') }}" alt="Datos de planes">
                 <p class="text-center button-cont">
-                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="#videollamada">
-                        Explicación completa
-                    </a>
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
                 </p>
             </div>
         </div>

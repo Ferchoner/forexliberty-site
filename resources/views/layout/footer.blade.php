@@ -1,5 +1,5 @@
 <div class="call-to-action">
-    <a href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
+    <a href="https://wa.me/+5214433651732?text=Hola,%20vengo%20del%20sitio%20web,%20deseo%20obtener%20mas%20información" target="_blank">
         <img src="{{ asset('image/whatsapp_FXL.svg') }}" class="img-fluid" alt="Agenda una video llamada">
     </a>
 </div>
@@ -12,9 +12,7 @@
             </div>
             <div class="col-5">
                 <p class="m-0 p-2 button-cont">
-                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
-                        Agenda una videollamada
-                    </a>
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una llamada'])
                 </p>
             </div>
         </div>
@@ -37,9 +35,9 @@
                         </a>
                     </p>
                     <p class="socials text-monserrat-light">
-                        <a href="#facebook"><img src="{{ asset('image/facebook_FXL.svg') }}" alt="Facebook" class="img-social"></a>
-                        <a href="#instagram"><img src="{{ asset('image/instagram_FXL.svg') }}" alt="Instagram" class="img-social"></a>
-                        <a href="#facebook"><img src="{{ asset('image/youtube_FXL.svg') }}" alt="Youtube" class="img-social"></a>
+                        <a target="_blank" href="https://www.facebook.com/forexlibertyautotrading"><img src="{{ asset('image/facebook_FXL.svg') }}" alt="Facebook" class="img-social"></a>
+                        <a target="_blank" href="https://www.instagram.com/forexliberty"><img src="{{ asset('image/instagram_FXL.svg') }}" alt="Instagram" class="img-social"></a>
+                        <a target="_blank" href="https://www.youtube.com/@forexliberty9947"><img src="{{ asset('image/youtube_FXL.svg') }}" alt="Youtube" class="img-social"></a>
                     </p>
                     <p class="text-monserrat-light">
                         Copyright © 2023 — FOREX LIBERTY <br>
@@ -66,9 +64,9 @@
                     </a>
                 </p>
                 <p class="socials text-monserrat-light">
-                    <a href="#facebook"><img src="{{ asset('image/facebook_FXL.svg') }}" alt="Facebook" class="img-social"></a>
-                    <a href="#instagram"><img src="{{ asset('image/instagram_FXL.svg') }}" alt="Instagram" class="img-social"></a>
-                    <a href="#facebook"><img src="{{ asset('image/youtube_FXL.svg') }}" alt="Youtube" class="img-social"></a>
+                    <a target="_blank" href="https://www.facebook.com/forexlibertyautotrading"><img src="{{ asset('image/facebook_FXL.svg') }}" alt="Facebook" class="img-social"></a>
+                    <a target="_blank" href="https://www.instagram.com/forexliberty"><img src="{{ asset('image/instagram_FXL.svg') }}" alt="Instagram" class="img-social"></a>
+                    <a target="_blank" href="https://www.youtube.com/@forexliberty9947"><img src="{{ asset('image/youtube_FXL.svg') }}" alt="Youtube" class="img-social"></a>
                 </p>
                 <p class="text-monserrat-light">
                     Copyright © 2023 — FOREX LIBERTY <br>
