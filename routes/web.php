@@ -25,5 +25,6 @@ Route::get('/bot-trabajando', [MainController::class, 'botWorking'])->name('bot-
 Route::get('/acerca-de', [MainController::class, 'aboutUs'])->name('about-us');
 Route::get('/contacto', [MainController::class, 'contact'])->name('contact');
 Route::get('/preguntas-frecuentes', [MainController::class, 'faqs'])->name('faqs');
+Route::get('/terminos-condiciones', [MainController::class, 'legal'])->name('legal');
 
 Route::post('/contacto', [MainController::class, 'save'])->name('save-form');

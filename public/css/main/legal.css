@@ -29,16 +29,11 @@ body {
     min-width: 100%;
 }
 
-.videos-section .video-item-content iframe {
-    width: 100%;
-    height: 35vh;
-    border-radius: 30px;
-    margin-bottom: 30px;
-}
-
 .slide-section .text-container .text-data-title {
     font-size: 48px;
     color: #ffffff;
+    line-height: 50px;
+    margin-bottom: 65px;
 }
 
 .slide-section .img-cont {
@@ -49,6 +44,22 @@ body {
 .slide-section .img-cont img {
     width: 95%;
     border-radius: 50px;
+}
+
+.slide-section .text-data-question {
+    color: #00efe7;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.slide-section .text-data-answer {
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.slide-section a {
+    color: #00efe7;
 }
 
 @media (min-width: 576px) {

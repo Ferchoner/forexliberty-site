@@ -13,9 +13,7 @@
             <a class="m-option py-4 mt-2 text-montserrat-regular text-decoration-none" href="{{ route('contact') }}">Contacto</a>
             <a class="m-option py-4 mt-2 text-montserrat-regular text-decoration-none" href="{{ route('about-us') }}">Acerca de</a>
         </nav>
-        <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
-            Agenda una videollamada
-        </a>
+        @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
     </div>
 </header>
 <header class="desktop-fixed-menu w-100">
@@ -31,9 +29,7 @@
                 <a class="m-option py-4 mt-2 text-montserrat-regular text-decoration-none" href="{{ route('contact') }}">Contacto</a>
                 <a class="m-option py-4 mt-2 text-montserrat-regular text-decoration-none" href="{{ route('about-us') }}">Acerca de</a>
             </nav>
-            <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
-                Agenda una videollamada
-            </a>
+            @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
         </div>
     </div>
 </header>
@@ -60,9 +56,7 @@
                         <div class="w-100"></div>
                         <div class="col list-el text-center"><a class="text-white text-montserrat-regular" href="{{ route('about-us') }}">Acerca de</a></div>
                         <div class="w-100"></div>
-                        <a class="hangout-button mb-2 mt-5 text-decoration-none text-montserrat-semibold" href="https://wa.me/524438430245?text=Hola,%20deseo%20contarme%20con%20ustedes" target="_blank">
-                            Agenda una videollamada
-                        </a>
+                        @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
                     </div>
                 </div>
             </div>

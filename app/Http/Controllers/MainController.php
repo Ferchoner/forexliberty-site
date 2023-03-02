@@ -6,6 +6,8 @@ use App\Mail\ContactForm;
 use App\Mail\ContactFormUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
+use PHPUnit\Util\Json;
 
 class MainController extends Controller
 {
@@ -28,14 +30,20 @@ class MainController extends Controller
     }
 
     public function testimony(Request $request) {
+        $video_list = Storage::get('videolists\testimonial-list.json');
+        $l_arr = json_decode($video_list);
         return view('main.testimony', [
-            'footer_bg_styles' => 'background-color: #12213d'
+            'footer_bg_styles' => 'background-color: #12213d',
+            'videoList' => $l_arr
         ]);
     }
 
     public function results(Request $request) {
+        $video_list = Storage::get('videolists\results-list.json');
+        $l_arr = json_decode($video_list);
         return view('main.results', [
-            'footer_bg_styles' => 'background-color: #12213d'
+            'footer_bg_styles' => 'background-color: #12213d',
+            'videoList' => $l_arr
         ]);
     }
 
@@ -59,6 +67,12 @@ class MainController extends Controller
 
     public function faqs(Request $request) {
         return view('main.faqs', [
+            'footer_bg_styles' => 'background-color: #12213d'
+        ]);
+    }
+
+    public function legal(Request $request) {
+        return view('main.legal', [
             'footer_bg_styles' => 'background-color: #12213d'
         ]);
     }
