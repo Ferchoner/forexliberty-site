@@ -83,6 +83,10 @@
     margin: 0 auto 45px;
 }
 
+.licenses-section .data-container .row .col {
+    margin: 25px 0;
+}
+
 .licenses-section .text-data-title {
     color: #ffffff;
     margin-bottom: 45px;
@@ -147,7 +151,8 @@
     background-color: #ebebeb;
     color: #12213d;
     font-size: 18px;
-    padding: 15px 20px;
+    padding: 15px 10px;
+    letter-spacing: 0.5px;
 }
 
 .help-section {
@@ -164,7 +169,7 @@
 
 .help-section .text-data-info .subcontainer {
     line-height: 35px;
-    font-size: 35px;
+    font-size: 25px;
     color: #ffffff;
     background-color: #3f4d63;
     padding: 35px 0 25px;
@@ -233,8 +238,8 @@
     .system-section .data-container .text-data-info,
     .licenses-section .text-data-info,
     .help-section .text-data-info .subcontainer {
-        font-size: 25px;
-        line-height: 55px;
+        font-size: 35px;
+        line-height: 40px;
     }
 
     .main-section .hangout-button {
@@ -294,8 +299,9 @@
     }
 
     .review-section .hangout-button {
-        font-size: 20px;
-        padding: 15px 35px;
+        font-size: 18px;
+        padding: 15px 20px;
+        letter-spacing: 1px;
     }
 
     .help-section > .row {
@@ -312,7 +318,15 @@
 }
 
 @media (min-width: 768px) {
+    .review-section .hangout-button {
+        font-size: 20px;
+        padding: 15px 35px;
+    }
 
+    .help-section .text-data-info .subcontainer {
+        font-size: 22px;
+        line-height: 30px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -323,8 +337,23 @@
     .review-section .carousel-item p.author-cont {
         font-size: 30px;
     }
+
+    .review-section .hangout-button {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .main-section .data-container .text-data-info,
+    .system-section .data-container .text-data-info,
+    .licenses-section .text-data-info,
+    .help-section .text-data-info .subcontainer {
+        font-size: 30px;
+        line-height: 55px;
+    }
 }
 
 @media (min-width: 1200px) {
-
+    .review-section .hangout-button {
+        padding: 15px 35px;
+    }
 }

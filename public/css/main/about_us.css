@@ -19,7 +19,7 @@ body {
 
 /* MAIN SECTION */
 .main-section {
-    /*margin-bottom: 120px;*/
+    margin-bottom: 120px;
 }
 
 .main-section .img-container img {
@@ -30,15 +30,15 @@ body {
 }
 
 .main-section .text-data-title {
-    font-size: 48px;
-    line-height: 55px;
+    font-size: 25px;
+    line-height: 35px;
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .main-section .text-data-info {
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 18px;
+    line-height: 25px;
     letter-spacing: 1px;
     text-align: justify;
 }
@@ -48,7 +48,16 @@ body {
 }
 
 @media (min-width: 768px) {
+    .main-section .text-data-title {
+        font-size: 48px;
+        line-height: 55px;
+        margin-bottom: 60px;
+    }
 
+    .main-section .text-data-info {
+        font-size: 25px;
+        line-height: 35px;
+    }
 }
 
 @media (min-width: 992px) {

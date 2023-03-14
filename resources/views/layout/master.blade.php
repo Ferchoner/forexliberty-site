@@ -9,20 +9,26 @@
     <meta name="author" content="Anzuelo Team">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
     <link href="{{ asset('css/master.css') }}?v=1.0" media="screen" rel="stylesheet">
     <link href="{{ asset('css/layout.css') }}?v=1.0" media="screen" rel="stylesheet">
     @stack('styles')
-    <!-- Global site tag (gtag.js) - Google Analytics
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-230006720-1">
-    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWHCL6RL9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-230006720-1');
+        gtag('config', 'G-FWHCL6RL9E');
     </script>
-    Global site tag (gtag.js) - Google Analytics -->
 </head>
 <body>
     <script>

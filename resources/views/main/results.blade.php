@@ -15,24 +15,15 @@
 @endpush
 
 @section('content')
-    <div id="main-section" class="main-section mx-5">
-        <div class="row p-5 m-0">
+    <div id="main-section" class="main-section mx-1 mx-md-5">
+        <div class="row px-2 px-md-5 p-5 m-0">
             <div class="col-12 m-0 text-center">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLRQ_zKZ8E8olCMlUAju2k1GjyWZ-POZq_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-    <div id="videos-section" class="videos-section mx-5">
-        <div class="row p-5 m-0">
-            @foreach($videoList as $data)
-                <div class="col-12 col-md-6 col-lg-4 m-0 video-item-content">
-                    <iframe src="https://www.youtube.com/embed/{{ $data->video_id }}" title="{{ $data->video_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    <div id="slide-section" class="slide-section mx-5 px-5">
-        <div class="row p-5 m-0">
+    <div id="slide-section" class="slide-section mx-1 px-1 mx-md-5 px-md-5 mb-5">
+        <div class="row p-2 p-md-5 m-0">
             <div class="col-12 text-container">
                 <p class="text-data-title text-montserrat-semibold text-center">
                     Consulta resultados <br>
