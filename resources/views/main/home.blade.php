@@ -13,13 +13,13 @@
 @section('content')
     <div id="main-section" class="main-section mx-3 mx-md-5">
         <div class="row p-md-5 p-3 m-0">
-            <div class="col-12 col-md-6 m-0 p-0 video-container">
-                <video width="100%" muted autoplay loop>
+            <div class="col-12 col-lg-6 m-0 p-0 video-container">
+                <video width="100%" muted autoplay loop controls>
                     <source src="{{ asset('video/corporativo_FXL.mp4') }}" type="video/mp4">
                     Este navegador no puede reproducir este video :(.
                 </video>
             </div>
-            <div class="col-12 col-md-6 data-container pe-0 pe-md-1 ps-0 ps-md-5">
+            <div class="col-12 col-lg-6 data-container pe-0 pe-lg-1 ps-0 ps-lg-5">
                 <p class="text-data-title text-montserrat-semibold">
                     Rendimiento constante y a largo plazo
                 </p>
@@ -39,7 +39,7 @@
     <div id="system-section" class="system-section bg-transparent">
         <div class="container-fluid">
             <div class="row px-lg-5">
-                <div class="col-12 col-md-6 data-container mx-0 pe-3 ps-3 ps-md-5">
+                <div class="col-12 col-lg-6 data-container mx-0 pe-3 ps-3 ps-md-5">
                     <p class="text-data-title text-montserrat-semibold">
                         Desarrollamos un sistema completamente automático,
                     </p>
@@ -47,7 +47,7 @@
                         amigable, confiable y preciso, para que personas con o sin experiencia en trading puedan generar ingresos pasivos.
                     </p>
                 </div>
-                <div class="col-12 col-md-6 image-container mt-3 mt-md-0 text-center">
+                <div class="col-12 col-lg-6 image-container mt-3 mt-lg-0 text-center">
                     <img src="{{ asset('image/robots_FXL.svg') }}" alt="Robots">
                 </div>
             </div>
@@ -63,22 +63,22 @@
             </div>
             <div class="col-12 data-container text-center">
                 <div class="row">
-                    <div class="col col-sm-12 col-md-6 col-lg-3 text-data-info text-montserrat-regular">
+                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/1-estrellas_FXL.svg') }}" alt="Prueba"> <br>
                         <span class="text-montserrat-semibold bigger">Prueba</span> <br>
                         3 Semanas
                     </div>
-                    <div class="col col-sm-12 col-md-6 col-lg-3 text-data-info text-montserrat-regular">
+                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/2-estrellas_FXL.svg') }}" alt="Básica"> <br>
                         <span class="text-montserrat-semibold bigger">Básica</span> <br>
                         6 meses
                     </div>
-                    <div class="col col-sm-12 col-md-6 col-lg-3 mt-4 mt-md-0 text-data-info text-montserrat-regular">
+                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/3-estrellas_FXL.svg') }}" alt="Premium"> <br>
                         <span class="text-montserrat-semibold bigger">Premium</span> <br>
                         1 Año
                     </div>
-                    <div class="col col-sm-12 col-md-6 col-lg-3 mt-4 mt-md-0 text-data-info text-montserrat-regular">
+                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/4-estrellas_FXL.svg') }}" alt="Gold"> <br>
                         <span class="text-montserrat-semibold bigger">Gold</span> <br>
                         Vitalicia.
@@ -96,7 +96,7 @@
     </div>
     <div id="review-section" class="review-section container-fluid py-3 px-0">
         <div class="row m-0 p-0 ps-md-5">
-            <div class="align-self-center col-12 col-md-6 ps-3 ps-md-5">
+            <div class="align-self-center col-12 col-lg-6 ps-3 ps-xl-5">
                 <div class="row">
                     <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                         <div class="carousel-indicators">
@@ -136,16 +136,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 data-container p-5 px-3 px-md-5">
+            <div class="col-12 col-lg-6 data-container p-5 px-3 px-xl-5">
                 <p class="text-montserrat-semibold text-data-info bigger text-center pt-5">
                     98%
                 </p>
                 <p class="text-montserrat-semibold text-data-info text-center">
                     De nuestros usuarios nos recomiendan.
                 </p>
-                <p class="m-0 p-2 text-end">
-                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="{{ route('testimony') }}">
-                        Ver testimonios
+                <p class="m-0 p-2 text-center text-xl-end">
+                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://www.facebook.com/forexlibertyautotrading/reviews" target="_blank">
+                        Ver testimonios en Facebook
                     </a>
                 </p>
             </div>

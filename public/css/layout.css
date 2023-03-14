@@ -1,5 +1,26 @@
-html, body {
+@keyframes popFBS {
+    0% {bottom: -155px;}
+    70% {bottom: -155px;}
+    100% {bottom: -1px;}
+}
+
+@keyframes popFBSlg {
+    0% {bottom: -155px;}
+    70% {bottom: -155px;}
+    100% {bottom: 50px;}
+}
+
+html {
     min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden auto;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .desktop-menu {
@@ -10,15 +31,19 @@ html, body {
     background-color: #ffffff;
 }
 
-.desktop-menu .header-div .cc-logo,
-.desktop-fixed-menu .header-div .cc-logo {
-    height: 65px;
+.desktop-menu .header-div .cc-logo, .desktop-fixed-menu .header-div .cc-logo {
+    width: 200px;
+}
+
+.desktop-menu .header-div nav.cc-menu-container,
+.desktop-fixed-menu .header-div nav.cc-menu-container {
+    margin: 0 20px;
 }
 
 .desktop-menu .header-div nav a,
 .desktop-fixed-menu .header-div nav a {
     color: #12213d;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .desktop-menu .header-div nav a:hover,
@@ -28,7 +53,9 @@ html, body {
 
 .desktop-menu .hangout-button,
 .desktop-fixed-menu .hangout-button {
-    margin-left: 15px;
+    width: 230px;
+    font-size: 14px;
+    padding: 8px 7px;
 }
 
 .desktop-fixed-menu {
@@ -48,8 +75,8 @@ html, body {
 
 .burguer {
     position: absolute;
-    top: 15px;
-    right: 5px;
+    top: 25px;
+    right: 10px;
     width: 40px;
     height: 32px;
 }
@@ -60,12 +87,9 @@ html, body {
 }
 
 .mobile-menu .header-div {
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(top, rgb(18 33 61 / 80%), rgb(0 0 0 / 0%));
-    background-image: -moz-linear-gradient(   top, rgb(18 33 61 / 80%), rgb(0 0 0 / 0%));
-    background-image: -ms-linear-gradient(    top, rgb(18 33 61 / 80%), rgb(0 0 0 / 0%));
-    background-image: -o-linear-gradient(     top, rgb(18 33 61 / 80%), rgb(0 0 0 / 0%));
-    background-image: linear-gradient(        top, rgb(18 33 61 / 80%), rgb(0 0 0 / 0%));
+    background-color: #FFFFFFFF;
+    border-radius: 45px;
+    box-shadow: 2px 12px 15px -10px #000000;
 }
 
 .mobile-menu .header-div a {
@@ -124,12 +148,12 @@ html, body {
 
 .mobile-menu span:first-child
 {
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
 }
 
 .mobile-menu span:nth-last-child(2)
 {
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
 }
 
 /*
@@ -172,7 +196,6 @@ html, body {
     width: 115vw;
     margin: 0;
     background-color: #2d2e82;
-    position: fixed;
     transition: left 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     position: absolute;
 }
@@ -228,7 +251,7 @@ html, body {
     overflow: hidden;
     transition: width 250ms, height 250ms;
     translate: -50% -50%;
-    z-index: 990;
+    z-index: 1000;
 }
 
 .promo-modal.open {
@@ -248,7 +271,6 @@ html, body {
 .promo-modal .promo-container {
     width: 92%;
     margin: 0 auto;
-    background-color: #12213d;
     background-color: #2d2e82;
     background-image: -webkit-linear-gradient(top, #1d70b7, #2d2e82);
     background-image:    -moz-linear-gradient(top, #1d70b7, #2d2e82);
@@ -263,7 +285,7 @@ html, body {
 }
 
 .promo-modal .promo-container .img-cont {
-    padding: 50px 0 50px 50px;
+    padding: 20px;
     position: relative;
 }
 
@@ -271,6 +293,10 @@ html, body {
     width: 85%;
     margin: 0 auto;
     position: relative;
+}
+
+.promo-modal .promo-container .hangout-cont {
+    height: 140px;
 }
 
 .promo-modal .promo-container .button-cont {
@@ -283,21 +309,32 @@ html, body {
 
 .promo-modal .promo-container .hangout-button {
     background-color: #ffffff;
-    padding: 20px 25px;
-    font-size: 30px;
+    padding: 10px 15px;
+    font-size: 25px;
     color: #12213d;
-    margin-left: -200px;
+    margin-left: 0;
 }
 
-.false-footer, footer {
+.fbs {
+    position: fixed;
+    left: 0;
+    bottom: -1px;
+    background: transparent;
+    z-index: 990;
+    width: 220px;
+    animation-name: popFBS;
+    animation-duration: 5s;
+}
+
+.false-footer, footer > div {
     background-color: #ffffff;
     border-radius: 20px;
     width: calc(100% - 1rem);
 }
 
 .false-footer img.alter-logo, footer img.alter-logo {
-    width: 300px;
-    margin: 100px auto;
+    width: 215px;
+    margin: 50px auto 10px;
 }
 
 .false-footer .data, footer .data {
@@ -335,7 +372,7 @@ html, body {
 }
 
 footer {
-    margin-top: -575px;
+    margin-top: -455px;
 }
 
 .false-footer {
@@ -350,44 +387,59 @@ footer {
 }
 
 @media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
     .mobile-menu .header-div a img {
         height: 60px;
     }
 
     .burguer {
-        top: 25px;
+        top: 32px;
         right: 20px;
     }
 
     footer {
-        margin-top: -360px;
+        margin-top: -420px;
     }
 
-    .false-footer, footer {
+    .false-footer img.alter-logo, footer img.alter-logo {
+        width: 300px;
+        margin: 100px auto;
+    }
+
+    .false-footer, footer > div {
         background-color: #ffffff;
         border-radius: 20px;
-        width: calc(100% - 6rem);
     }
 
     .false-footer .data, footer .data {
         margin-top: 100px;
         color: #12213d;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .false-footer .mailto, footer .mailto {
-        font-size: 35px;
-        color: #12213d;
+        font-size: 20px;
     }
 
     .false-footer p.socials, footer p.socials {
         margin-top: -15px;
         margin-bottom: 50px;
     }
-}
 
-@media (min-width: 768px) {
+    .legal-link {
+        color: #12213d;
+        text-decoration: none;
+    }
 
+    .fbs {
+        left: 30px;
+        bottom: 50px;
+        width: 260px;
+        animation-name: popFBSlg;
+    }
 }
 
 @media (min-width: 992px) {
@@ -402,8 +454,74 @@ footer {
     .mobile-menu {
         display: none;
     }
+
+    .false-footer .mailto, footer .mailto {
+        font-size: 26px;
+    }
+
+    .promo-modal .promo-container .hangout-cont {
+        height: inherit;
+    }
+
+    .promo-modal .promo-container .img-cont {
+        padding: 50px 0 50px 50px;
+    }
+
+    .promo-modal .promo-container .hangout-button {
+        padding: 20px 25px;
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 1200px) {
+    .false-footer .mailto, footer .mailto {
+        font-size: 32px;
+    }
 
+    .desktop-menu .header-div nav.cc-menu-container, .desktop-fixed-menu .header-div nav.cc-menu-container {
+        margin: 0 35px;
+    }
+
+    .desktop-menu .header-div nav a, .desktop-fixed-menu .header-div nav a {
+        font-size: 20px;
+    }
+
+    .desktop-menu .hangout-button, .desktop-fixed-menu .hangout-button {
+        width: 320px;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .promo-modal .promo-container .hangout-button {
+        font-size: 30px;
+        margin-left: -200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .desktop-menu .header-div .cc-logo, .desktop-fixed-menu .header-div .cc-logo {
+        width: 250px;
+    }
+
+    .desktop-menu .header-div nav.cc-menu-container, .desktop-fixed-menu .header-div nav.cc-menu-container {
+        margin: 0 55px;
+    }
+
+    .promo-modal .promo-container .hangout-button {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .desktop-menu .header-div .cc-logo, .desktop-fixed-menu .header-div .cc-logo {
+        width: 270px;
+    }
+
+    .desktop-menu .header-div nav.cc-menu-container, .desktop-fixed-menu .header-div nav.cc-menu-container {
+        margin: 0 75px;
+    }
+
+    .promo-modal .promo-container .hangout-button {
+        font-size: 45px;
+    }
 }

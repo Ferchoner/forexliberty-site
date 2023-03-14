@@ -19,7 +19,6 @@ body {
 
 /* MAIN SECTION */
 .main-section {
-    /*margin-bottom: 120px;*/
 }
 
 .main-section iframe {
@@ -27,6 +26,7 @@ body {
     min-height: 60vh;
     max-height: 75vh;
     min-width: 100%;
+    width: 100%;
 }
 
 .videos-section .video-item-content iframe {

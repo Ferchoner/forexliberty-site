@@ -11,15 +11,15 @@
 @endpush
 
 @section('content')
-    <div id="main-section" class="main-section mx-5">
-        <div class="row p-5 m-0">
+    <div id="main-section" class="main-section mx-2 mx-md-5">
+        <div class="row p-5 px-2 px-md-5 m-0">
             <div class="col-12 m-0 text-center">
                 <iframe src="https://www.youtube.com/embed/kRWXyjhymFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-    <div id="slide-section" class="slide-section mx-5 px-5">
-        <div class="row p-5 m-0">
+    <div id="slide-section" class="slide-section mx-2 mx-md-5 px-2 px-md-5">
+        <div class="row p-5 px-2 px-md-5 m-0">
             <div class="col-12 text-container">
                 <p class="text-data-title text-montserrat-semibold text-center">
                     Respuesta a <br>
