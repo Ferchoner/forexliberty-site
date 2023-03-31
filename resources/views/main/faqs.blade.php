@@ -3,7 +3,7 @@
 @section('page_title', 'Preguntas Frecuentes')
 
 @push('styles')
-    <link href="{{ asset('css/main/faqs.css') }}" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/main/faqs.css') }}?v=1.01" media="screen" rel="stylesheet">
 @endpush
 
 @push('scripts')
@@ -14,7 +14,7 @@
     <div id="main-section" class="main-section mx-2 mx-md-5">
         <div class="row p-5 px-2 px-md-5 m-0">
             <div class="col-12 m-0 text-center">
-                <iframe src="https://www.youtube.com/embed/kRWXyjhymFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/V37Qfj-YTnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -31,19 +31,13 @@
                     ¿Necesito tener experiencia en Forex o en Trading?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - No, ya que nuestro bot hace todo por ti, además te incluimos un curso básico de Forex en vivo al comprarlo y asesoría personalizada 24/7.
-                </p>
-                <p class="text-data-question text-montserrat-regular">
-                    ¿Necesito tener una computadora para utilizarlo?
-                </p>
-                <p class="text-data-answer text-montserrat-light">
-                    - No, en su lugar podemos utilizar una vps, en el primer vídeo lo explicamos más a detalle.
+                    - No, ya que nuestro bot hace todo por ti, además te incluimos un curso básico de Forex en vivo al comprarlo y asesoría personalizada.
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿Necesito tener todo el tiempo prendida mi computadora?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - No, podemos utilizar una vps, en el primer vídeo lo explicamos más a detalle.
+                    - No, en su lugar podemos utilizar una vps.
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿En qué plataforma trabaja el bot?
@@ -73,13 +67,13 @@
                     ¿Puedo controlar mi riesgo?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - SI, puedes escoger trabajar el bot con riesgo bajo, medio o alto.
+                    - Si, puedes escoger trabajar el bot con riesgo bajo, medio o alto.
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿Qué rendimientos me genera el bot?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - El bot te puede hacer entre un 20 a 100% de rendimiento mensual, dependiendo del riesgo con el que lo trabajes y de los movimientos del mercado.
+                    - El bot te puede hacer entre un 12 a 100% de rendimiento mensual, dependiendo del riesgo con el que lo trabajes y de los movimientos del mercado.
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿Dónde deposito y retiro mi dinero?
@@ -115,7 +109,7 @@
                     ¿Cómo se comporta el bot con las noticias (fundamentales) del mercado?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - Nuestro bot tiene un filtro de noticias, el cual hace que se desactive antes de una noticia, y se active automáticamente después de la misma, esto para no dar falsas entradas o falsos análisis.
+                    - Nuestro bot tiene un filtro de noticias, el cual hace que se desactive antes de una noticia, y se active automáticamente después de la misma, esto para no dar falsas entradas o falsos análisis y proteger nuestro dinero.
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿Qué lotajes, pares, apalancamiento, tipo de cuenta, broker etc. se recomiendan utilizar con el bot?
@@ -149,10 +143,15 @@
                 </p>
                 </p>
                 <p class="text-data-question text-montserrat-regular">
-                    ¿De que país son ustedes?
+                    ¿Sirve para cuentas de fondeo?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    - Somos de México
+                    - No podemos decir con certeza si funciona o no en cuentas de fondeo, ya que no lo hemos probado ahí y las condiciones en cada cuenta de fondeo cambian, pero tenemos clientes que si lo han utilizado ahí
+                </p>
+            </div>
+            <div class="col-12 text-center px-3 px-md-5 py-5 d-lg-none">
+                <p class="m-0 p-2">
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
                 </p>
             </div>
         </div>

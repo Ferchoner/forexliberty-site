@@ -7,7 +7,7 @@
 @section('page_title', 'Home')
 
 @push('styles')
-    <link href="{{ asset('css/main/testimony.css') }}" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/main/testimony.css') }}?v=1.0" media="screen" rel="stylesheet">
 @endpush
 
 @push('scripts')
@@ -29,6 +29,11 @@
                     <iframe src="https://www.youtube.com/embed/{{ $data->video_id }}" title="{{ $data->video_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             @endforeach
+        </div>
+        <div class="col-12 text-center px-3 px-md-5 py-5 d-lg-none">
+            <p class="m-0 p-2 pb-5">
+                @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
+            </p>
         </div>
     </div>
 @endsection

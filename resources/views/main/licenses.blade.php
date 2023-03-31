@@ -23,7 +23,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-md-5 img-container ps-5 text-center">
+            <div class="col-12 col-md-5 img-container ps-0 ps-lg-5 text-center">
                 <img src="{{ asset('image/descuento_FXL.svg') }}" alt="¡Promoción!">
             </div>
         </div>

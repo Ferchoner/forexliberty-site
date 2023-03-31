@@ -1,5 +1,6 @@
 // VARS
 let headerEl = null;
+let close_modal_icon = null;
 
 let openModal = (modal_selector) => {
     let modal = null;
@@ -82,5 +83,9 @@ $(() => {
             openModal('.promo-modal');
         }, 1500)
     }
+
+    close_modal_icon = document.querySelector('.close-button');
+    if (close_modal_icon)
+        close_modal_icon.addEventListener('click', evt => closeModal('.promo-modal'))
 })
 

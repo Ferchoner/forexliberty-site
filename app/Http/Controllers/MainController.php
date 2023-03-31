@@ -12,8 +12,11 @@ use PHPUnit\Util\Json;
 class MainController extends Controller
 {
     public function home(Request $request) {
+        $ratings = Storage::get('videolists\ratings.json');
+        $rating_arr = json_decode($ratings);
         return view('main.home', [
-            'footer_bg_styles' => 'background-color: #1a202c'
+            'footer_bg_styles' => 'background-color: #1a202c',
+            'ratings' => $rating_arr
         ]);
     }
 
