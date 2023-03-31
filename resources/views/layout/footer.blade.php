@@ -1,5 +1,5 @@
 <div class="call-to-action">
-    <a href="https://wa.me/+5214433651732?text=Hola,%20vengo%20del%20sitio%20web,%20deseo%20obtener%20mas%20información" target="_blank">
+    <a href="https://wa.me/+5214433651732?text=Hola,%20vengo%20del%20sitio%20web,%20deseo%20obtener%20más%20información" target="_blank">
         <img src="{{ asset('image/whatsapp_FXL.svg') }}" class="img-fluid" alt="Agenda una video llamada">
     </a>
 </div>
@@ -7,12 +7,17 @@
     <div class="closable-area" onclick="closeModal('.promo-modal')"></div>
     <div class="promo-container">
         <div class="row">
+            <div class="close-button">
+                X
+            </div>
             <div class="col-12 col-lg-7 img-cont text-center">
                 <img src="{{ asset('image/descuento_FXL.svg') }}" alt="¡Promoción!">
             </div>
             <div class="col-12 col-lg-5 hangout-cont">
                 <p class="m-0 p-2 button-cont">
-                    @include('layout.schedule-a-call', ['message' => 'Agenda una llamada'])
+                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" target="_blank" href="{{ route('explanation') }}">
+                        Explicación Completa
+                    </a>
                 </p>
             </div>
         </div>
@@ -34,8 +39,8 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="row">
-                        <div class="col px-4 px-md-5 pt-5 pb-1 text-end data">
+                    <div class="row pb-3">
+                        <div class="col px-4 px-md-5 pt-5 pb-5 text-end data">
                             <p class="text-monserrat-semibold">
                                 <a class="text-decoration-none mailto" href="mailto:ventasforexliberty@outlook.com" target="_blank">
                                     ventasforexliberty@outlook.com
@@ -68,8 +73,8 @@
                 </a>
             </div>
             <div class="col-12 col-md-6">
-                <div class="row">
-                    <div class="px-4 px-md-5 pt-5 pb-1 text-end data">
+                <div class="row pb-3">
+                    <div class="px-4 px-md-5 pt-5 pb-5 text-end data">
                         <p class="text-monserrat-semibold">
                             <a class="text-decoration-none mailto" href="mailto:ventasforexliberty@outlook.com" target="_blank">
                                 ventasforexliberty@outlook.com

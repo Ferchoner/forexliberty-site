@@ -29,10 +29,14 @@ body {
     min-width: 100%;
 }
 
+.slide-section {
+    margin-top: 80px;
+}
+
 .slide-section .text-container .text-data-title {
-    font-size: 48px;
+    font-size: 40px;
     color: #ffffff;
-    line-height: 50px;
+    line-height: 45px;
     margin-bottom: 65px;
 }
 
@@ -54,8 +58,9 @@ body {
 
 .slide-section .text-data-answer {
     margin-bottom: 30px;
-    font-size: 25px;
+    font-size: 21px;
     text-align: justify;
+    overflow-wrap: break-word;
 }
 
 .slide-section a {
@@ -71,8 +76,16 @@ body {
 }
 
 @media (min-width: 992px) {
+    .slide-section .text-container .text-data-title {
+        font-size: 48px;
+        color: #ffffff;
+        line-height: 50px;
+        margin-bottom: 65px;
+    }
 
-
+    .slide-section .text-data-answer {
+        font-size: 25px;
+    }
 }
 
 @media (min-width: 1200px) {

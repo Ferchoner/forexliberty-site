@@ -19,7 +19,7 @@ body {
 
 /* MAIN SECTION */
 .main-section {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 
 .main-section iframe {
@@ -39,10 +39,16 @@ body {
     text-align: center;
 }
 
-
 .slide-section .img-cont img {
     width: 95%;
     border-radius: 50px;
+}
+
+.main-section .hangout-button {
+    background-color: #ffffff;
+    color: #12213d;
+    font-size: 19px;
+    padding: 10px 5px;
 }
 
 @media (min-width: 576px) {

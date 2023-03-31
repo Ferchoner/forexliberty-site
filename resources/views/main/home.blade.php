@@ -1,13 +1,17 @@
+<?php
+/** @var $ratings Array */
+?>
+
 @extends('layout.master')
 
 @section('page_title', 'Home')
 
 @push('styles')
-    <link href="{{ asset('css/main/home.css') }}" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/main/home.css') }}?v=1.3" media="screen" rel="stylesheet">
 @endpush
 
 @push('scripts')
-    <script src="{{ asset('js/main/home.js') }}"></script>
+    <script src="{{ asset('js/main/home.js') }}?v=1.4"></script>
 @endpush
 
 @section('content')
@@ -94,44 +98,77 @@
             </div>
         </div>
     </div>
+    <div id="reviews" class="review-section container-fluid py-3 px-0" style="opacity: 0; height: 0; margin: -115px 0 115px">
+        <div class="row m-0 p-0 ps-md-5">
+            <div class="align-self-center col-12 col-lg-6 ps-3 ps-xl-5">
+                <div class="row">
+                    <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-indicators">
+                            @foreach($ratings as $review)
+                                <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }} {{ $loop->first ? "aria-current='true'" : "" }} aria-label="Review {{ $loop->index + 1 }}">
+                                </button>
+                            @endforeach
+                        </div>
+                        <div class="carousel-inner">
+                            @foreach($ratings as $review)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No {{ $loop->index }}">
+                                    <div class="carousel-caption">
+                                        <p class="author-cont pb-3">
+                                            <img class="img-fluid" src="{{ $review->photo }}" alt="Perfil">
+                                            <span class="author text-montserrat-semibold fw-bold">{{ $review->name }}</span>
+                                        </p>
+                                        <p class="text-montserrat-regular fst-italic">
+                                            "{{ implode(' ', array_slice(explode(' ', $review->comment), 0, 15)) }} ..."
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 data-container p-5 px-3 px-xl-5">
+                <p class="text-montserrat-semibold text-data-info bigger text-center pt-5">
+                    98%
+                </p>
+                <p class="text-montserrat-semibold text-data-info text-center">
+                    De nuestros usuarios nos recomiendan.
+                </p>
+                <p class="m-0 p-2 text-center text-xl-end">
+                    <a class="hangout-button mb-2 mt-4 text-decoration-none text-montserrat-semibold" href="https://www.facebook.com/forexlibertyautotrading/reviews" target="_blank">
+                        Ver testimonios en Facebook
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
     <div id="review-section" class="review-section container-fluid py-3 px-0">
         <div class="row m-0 p-0 ps-md-5">
             <div class="align-self-center col-12 col-lg-6 ps-3 ps-xl-5">
                 <div class="row">
                     <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
-                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Review 2"></button>
-                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="2" aria-label="Review 3"></button>
+                            @foreach($ratings as $review)
+                                <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }} {{ $loop->first ? "aria-current='true'" : "" }} aria-label="Review {{ $loop->index + 1 }}">
+                                </button>
+                            @endforeach
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 1">
-                                <div class="carousel-caption">
-                                    <p class="text-montserrat-regular fst-italic">"Feliz por haber tomado la decisión de adquirir el robot. Siempre obtengo respuesta, muy buena asistencia."</p>
-                                    <p class="author-cont text-end">
-                                        <span class="author text-montserrat-semibold fw-bold">Martin Cafferatto</span>
-                                    </p>
+                            @foreach($ratings as $review)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No {{ $loop->index }}">
+                                    <div class="carousel-caption">
+                                        <p class="author-cont pb-3">
+                                            <img class="img-fluid" src="{{ $review->photo }}" alt="Perfil">
+                                            <span class="author text-montserrat-semibold fw-bold">{{ $review->name }}</span>
+                                        </p>
+                                        <p class="text-montserrat-regular fst-italic">
+                                            "{{ implode(' ', array_slice(explode(' ', $review->comment), 0, 15)) }} ..."
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 2">
-                                <div class="carousel-caption">
-                                    <p class="text-montserrat-regular fst-italic">"Súper recomendado el bot, es una gran herramienta ya llevo un tiempo con él y estoy muy feliz con sus resultados."</p>
-                                    <p class="author-cont text-end">
-                                        <span class="author text-montserrat-semibold fw-bold">Sebastian Martinez</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('image/bg_transparent.png') }}" class="d-block w-100" alt="Review No 3">
-                                <div class="carousel-caption">
-                                    <p class="text-montserrat-regular fst-italic">"A Good trading platform service I can truly trust. They are transparent on all transactions and explain everything clearly.I never had fear and i am confident in trading with them."</p>
-                                    <p class="author-cont text-end">
-                                        <span class="author text-montserrat-semibold fw-bold">Daniels Graham</span>
-                                    </p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

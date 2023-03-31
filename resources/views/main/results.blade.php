@@ -7,11 +7,11 @@
 @section('page_title', 'Home')
 
 @push('styles')
-    <link href="{{ asset('css/main/results.css') }}" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/main/results.css') }}?v=1.0" media="screen" rel="stylesheet">
 @endpush
 
 @push('scripts')
-    <script src="{{ asset('js/main/results.js') }}"></script>
+    <script src="{{ asset('js/main/results.js') }}?v=1.1"></script>
 @endpush
 
 @section('content')
@@ -366,6 +366,11 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+            </div>
+            <div class="col-12 text-center px-3 px-md-5 py-5 d-lg-none">
+                <p class="m-0 p-2 pb-5">
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
+                </p>
             </div>
         </div>
     </div>

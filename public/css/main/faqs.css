@@ -58,6 +58,13 @@ body {
     font-size: 18px;
 }
 
+.slide-section .hangout-button {
+    background-color: #ffffff;
+    color: #12213d;
+    font-size: 19px;
+    padding: 10px 5px;
+}
+
 @media (min-width: 576px) {
 
 }

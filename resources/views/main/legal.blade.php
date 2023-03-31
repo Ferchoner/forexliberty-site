@@ -11,8 +11,8 @@
 @endpush
 
 @section('content')
-    <div id="slide-section" class="slide-section mx-5 px-5">
-        <div class="row p-5 m-0">
+    <div id="slide-section" class="slide-section mx-lg-5 mx-2 px-2 px-lg-5">
+        <div class="row px-2 px-lg-5 p-5 m-0">
             <div class="col-12 text-container">
                 <p class="text-data-title text-montserrat-semibold text-center">
                     Términos y condiciones
@@ -20,7 +20,12 @@
             </div>
             <div class="col-12 text-container">
                 <p class="text-data-answer text-montserrat-light">
-                    Recuerde que las inversiones en los mercados bursátiles son consideradas de alto riesgo, es un mercado en el que afectan muchos factores externos, por lo que las ganancias pasadas no nos aseguran las ganancias futuras. No nos hacemos responsables por cualquier pérdida parcial o total ocasionadas por el bot o el mal manejo del mismo. La comercialización o venta de nuestro(s) software(s)  sin nuestro consentimiento, así como cualquier falta de respeto o burla a nuestro personal o servicio, serán motivos para terminar la relación con el cliente, esto implica que se le dejarán de dar asesoramientos, actualizaciones, seminarios  y se le negará el acceso a los canales informativos y redes sociales.
+                    Forex Liberty Auto trading <span class="negritas">no es un broker o fondo de inversión; por lo que no administra, capta o gestiona el dinero de las personas para invertirlo en los mercados bursátiles.</span> Somos una empresa que proporciona un software automático para hacer trading en el mercado de Forex y damos asesoramiento sobre el uso del mismo.<br>
+                </p>
+            </div>
+            <div class="col-12 text-container">
+                <p class="text-data-answer text-montserrat-light">
+                    Recuerde que las inversiones en los mercados bursátiles son consideradas de alto riesgo, es un mercado en el que afectan muchos factores externos, por lo que las ganancias pasadas no nos aseguran las ganancias futuras. No nos hacemos responsables por cualquier pérdida parcial o total ocasionadas por el bot o el mal manejo del mismo. La comercialización o venta de nuestro(s) software(s)  sin nuestro consentimiento, así como cualquier falta de respeto o burla a nuestro personal o servicio, serán motivos para terminar la relación con el cliente, esto implica que se le dejarán de dar asesoramientos, actualizaciones, seminarios y se le negará el acceso a los canales informativos y redes sociales.
                 </p>
             </div>
             <div class="col-12 text-container">
@@ -31,7 +36,7 @@
                     ¿Quiénes somos?
                 </p>
                 <p class="text-data-answer text-montserrat-light">
-                    FOREX LIBERTY, mejor conocido como FOREX LIBERTY AUTOTRADING, con domicilio en calle PINO SUAREZ, colonia CENTRO, ciudad URUAPAN, municipio o delegación URUAPAN, c.p. 60000, en la entidad de MICHOACAN, país México, y portal de internet <a href="https://forexliberty.com.mx">https://forexliberty.com.mx</a>, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
+                    FOREX LIBERTY, mejor conocido como FOREX LIBERTY AUTOTRADING, portal de internet <a href="https://forexliberty.com.mx">https://forexliberty.com.mx</a>, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
                 </p>
                 <p class="text-data-question text-montserrat-regular">
                     ¿Para qué fines utilizaremos sus datos personales?

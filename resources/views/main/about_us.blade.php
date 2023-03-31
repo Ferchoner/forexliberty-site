@@ -27,6 +27,11 @@
                     Por estas dos enormes razones decidimos crear un sistema completamente automático, amigable, confiable, preciso y ganador, para que personas con o sin experiencia en trading puedan generar ingresos pasivos, hemos ayudado a cientos de personas en conseguir la libertad financiera, de ahí nuestro nombre, sabemos que hoy en día hay muchas estafas, y que es difícil hacer que la gente confíe, aún y cuando tenemos algo que realmente funciona, pero no pararemos de ayudar a los que estén listos y dispuestos a alcanzar su libertad financiera!
                 </p>
             </div>
+            <div class="col-12 text-center px-3 px-md-5 py-5 d-lg-none">
+                <p class="m-0 p-2 pb-5">
+                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
+                </p>
+            </div>
         </div>
     </div>
 @endsection

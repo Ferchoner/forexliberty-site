@@ -53,14 +53,24 @@ body {
 }
 
 #carouselResults .carousel-item img {
-    height: 60vh;
-    width: auto;
+    height: 30vh;
+    width: 96%;
     margin: auto;
     border-radius: 0;
+    max-width: 500px;
+}
+
+.slide-section .hangout-button {
+    background-color: #ffffff;
+    color: #12213d;
+    font-size: 19px;
+    padding: 10px 5px;
 }
 
 @media (min-width: 576px) {
-
+    #carouselResults .carousel-item img {
+        height: 45vh;
+    }
 }
 
 @media (min-width: 768px) {
@@ -71,8 +81,9 @@ body {
 }
 
 @media (min-width: 992px) {
-
-
+    #carouselResults .carousel-item img {
+        height: 60vh;
+    }
 }
 
 @media (min-width: 1200px) {
