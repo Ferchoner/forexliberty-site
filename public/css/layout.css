@@ -283,6 +283,7 @@ body {
     text-align: center;
     padding: 0 10px;
     cursor: pointer;
+    z-index: 50;
 }
 
 
