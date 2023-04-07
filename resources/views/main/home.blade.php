@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div id="reviews" class="review-section container-fluid py-3 px-0" style="opacity: 0; height: 0; margin: -115px 0 115px">
+    <div id="reviews" class="review-section container-fluid py-3 px-0" style="opacity: 0; height: 0; margin: -115px 0 115px;position: relative;z-index: -1;">
         <div class="row m-0 p-0 ps-md-5">
             <div class="align-self-center col-12 col-lg-6 ps-3 ps-xl-5">
                 <div class="row">

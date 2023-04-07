@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="{{ asset('css/master.css') }}?v=1.1" media="screen" rel="stylesheet">
-    <link href="{{ asset('css/layout.css') }}?v=1.2" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/layout.css') }}?v=1.3" media="screen" rel="stylesheet">
     @stack('styles')
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWHCL6RL9E"></script>
