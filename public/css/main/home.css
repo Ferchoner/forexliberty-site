@@ -99,6 +99,7 @@
     border-radius: unset;
     margin-bottom: 0;
     line-height: 15px;
+    position: relative;
 }
 
 .licenses-section .text-data-info .bigger {
@@ -109,6 +110,14 @@
 .licenses-section .text-data-info img {
     width: 100px;
     margin: 0 15px;
+}
+
+.licenses-section .text-data-info img.img-premium {
+    position: absolute;
+    left: calc(50% + 80px);
+    width: 70px;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .licenses-section .hangout-button {
@@ -244,6 +253,10 @@
     .main-section .text-data-info img {
         width: 35px;
         margin: 0 20px 0 5px;
+    }
+
+    .licenses-section .text-data-info img.img-premium {
+        left: calc(50% + 115px);
     }
 
     .main-section .data-container .text-data-info,

@@ -7,7 +7,7 @@
 @section('page_title', 'Home')
 
 @push('styles')
-    <link href="{{ asset('css/main/home.css') }}?v=1.3" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/main/home.css') }}?v=1.5" media="screen" rel="stylesheet">
 @endpush
 
 @push('scripts')
@@ -67,26 +67,24 @@
             </div>
             <div class="col-12 data-container text-center">
                 <div class="row">
-                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
-                        <img src="{{ asset('image/1-estrellas_FXL.svg') }}" alt="Prueba"> <br>
-                        <span class="text-montserrat-semibold bigger">Prueba</span> <br>
-                        3 Semanas
-                    </div>
-                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
+                    <div class="col d-none d-md-block"></div>
+                    <div class="col col-12 col-md-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/2-estrellas_FXL.svg') }}" alt="Básica"> <br>
                         <span class="text-montserrat-semibold bigger">Básica</span> <br>
                         6 meses
                     </div>
-                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
+                    <div class="col col-12 col-md-3 text-data-info text-montserrat-regular">
                         <img src="{{ asset('image/3-estrellas_FXL.svg') }}" alt="Premium"> <br>
                         <span class="text-montserrat-semibold bigger">Premium</span> <br>
                         1 Año
                     </div>
-                    <div class="col col-6 col-lg-3 text-data-info text-montserrat-regular">
+                    <div class="col col-12 col-md-3 text-data-info text-montserrat-regular">
+                        <img src="{{ asset('image/ventas_FXL.svg') }}" alt="Premium" class="img-premium">
                         <img src="{{ asset('image/4-estrellas_FXL.svg') }}" alt="Gold"> <br>
                         <span class="text-montserrat-semibold bigger">Gold</span> <br>
                         Vitalicia.
                     </div>
+                    <div class="col d-none d-md-block"></div>
                 </div>
             </div>
             <div class="col-12 text-end px-2 px-md-5">

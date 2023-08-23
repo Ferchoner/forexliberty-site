@@ -77,12 +77,13 @@ $(() => {
         })
 
     $(window).scroll();
-    if (!_getCookie('promo')) {
-        setTimeout(() => {
-            _setCookie('promo', 1);
-            openModal('.promo-modal');
-        }, 1500)
-    }
+    // This modal has to be disabled for a Limited time (1 month more or less)
+    // if (!_getCookie('promo')) {
+    //     setTimeout(() => {
+    //         _setCookie('promo', 1);
+    //         openModal('.promo-modal');
+    //     }, 1500)
+    // }
 
     close_modal_icon = document.querySelector('.close-button');
     if (close_modal_icon)
