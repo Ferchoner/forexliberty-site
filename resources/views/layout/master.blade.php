@@ -17,7 +17,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="{{ asset('css/master.css') }}?v=1.1" media="screen" rel="stylesheet">
+    <link href="{{ asset('css/master.css') }}?v=1.2" media="screen" rel="stylesheet">
     <link href="{{ asset('css/layout.css') }}?v=1.3" media="screen" rel="stylesheet">
     @stack('styles')
     <!-- Google tag (gtag.js) -->
@@ -39,7 +39,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/master.js') }}?v1"></script>
+    <script src="{{ asset('js/master.js') }}?v=1.1"></script>
     @stack('scripts')
 </body>
 </html>

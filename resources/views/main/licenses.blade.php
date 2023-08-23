@@ -31,7 +31,10 @@
             <div class="col-12 data-table text-center">
                 <img src="{{ asset('image/tabla_FXL.svg') }}" alt="Datos de planes">
                 <p class="text-center button-cont">
-                    @include('layout.schedule-a-call', ['message' => 'Agenda una videollamada'])
+                    @include('layout.schedule-a-call', [
+                        'message' => 'Comprar Licencia',
+                        'link' => 'https://wa.me/+5214433651732?text=Hola,%20vengo%20del%20sitio%20web,%20deseo%20adquirir%20mi%20licencia'
+                    ])
                 </p>
             </div>
         </div>
